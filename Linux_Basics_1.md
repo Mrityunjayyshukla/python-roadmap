@@ -64,3 +64,21 @@ cd -        // - (previous directory): This will take you to the previous direct
 ```
 
 ## 4. ls (List Directories)
+The ls command will list directories and files in the current directory by default; however, you can specify which path you want to list the directories of.<br>
+
+```
+ls
+ls /home/pete
+```
+
+To check the hidden files, `-a` command can be used, where `a` is the flag for all<br>
+
+```
+ls -a
+```
+
+`-l` can be used for showing a detailed list of files in a long format. This will show you detailed information, starting from the left: file permissions, number of links, owner name, owner group, file size, timestamp of last modification, and file/directory name.<br>
+
+```
+ls -l
+```
