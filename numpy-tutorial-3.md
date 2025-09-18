@@ -198,3 +198,26 @@ print(np.flip(arr_idim))
 
 # Output: array([5,6,4,7,3,8,2,9,1,10])
 ```
+
+
+<h2>Where() function</h2>
+Where Function in numpy performs a logical test and returns a given value if the test is True, or another if the test is False.<br>
+
+```
+import numpy as np
+inv_arr = np.array([12, 102, 18, 0, 0])
+print(np.where(inv_arr <= 0, "Out of stock", "In Stock"))
+
+# Output: np.array(['In Stock', 'In Stock', 'In Stock', 'Out of stock', 'Out of stock'])
+```
+
+This where() function can also be used in a nesting format. For example:
+
+```
+import numpy as np
+my_arr = np.array([1,2,3,4,5])
+
+print(np.where(my_arr % 2 == 0, 'even', np.where(my_arr == 3, my_arr, 'odd)))
+
+# Output: np.array(['odd','even',3,'even','odd'])
+```
