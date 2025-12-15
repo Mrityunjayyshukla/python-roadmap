@@ -289,8 +289,41 @@ print("Solution:")
 m.print()
 m.output_image("maze.png", show_explored=True)
 ```
+<p></p>
+<i><b>Uninformed Search</b></i><br>
+Search Strategy that uses no problem specific knowledge.<br>
+<p></p>
+<i><b>Informed Search</b></i><br>
+Search strategy that uses problem-specific knowledge to find solutions more efficiently.<br>
+<p></p>
+For Informed Search, some types of search that are used:<br>
+<i><b>Greedy best-first Search</b></i><br>
+Search algorithm that expands the node that is closest to the goal, as estimated by a heuristic function <i>h(n)</i>.<br>
+<p></p>
+<i><b>A* Search</b></i><br>
+Search algorithm that expands node with lowest value of g(n) + h(n).<br>
+g(n) = cost to reach node<br>
+h(n) = estimated cost to goal<br>
+In easy way, g(n) can be said as the number of steps that have been taken since the start and h(n) is the manhattan distance of that node from the goal.<br>
+<p></p>
+<b>A* Search</b> is optimal if:<br>
 
+- h(n) is admissible (never overestimates the true cost), and<br>
+- h(n) is consistent (for every node <i>n</i> and successor <i>n'</i> with step cost <i>c</i>, h(n) <= h(n') + c)
+<p></p>
+<i><b>Minimax</b></i><br>
+It is an algorithm where the player tries to maximise it's score and tries to minimise the opponent's score.<br>
 
+- Max(Player) aims to maximize score.
+- Min(Opponent) aims to minimize score.
 
+In the game, it contains certain elements<br>
 
+- s0: Initial State
+- Player(s): returns which player to move in state s
+- Actions(s): returns legal moves in state s
+- result(s,a): returns state after action a taken in state s
+- Terminal(s): checks if state s is a terminal state
+- Utility(s): final numerical value for terminal state s (For a game, 1 if player wins, 0 for draw and -1 if opponent wins)
 
+<p></p>
